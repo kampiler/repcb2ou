@@ -1,10 +1,10 @@
 <?
   error_reporting( E_ERROR );
   date_default_timezone_set("Asia/Baghdad");
-  require_once('1rep4out_.php');
+  require_once('lib4php.php');
 
   $dateo=date('Y-m-d');
-  #$dateo='2019-12-16';
+  #$dateo='2020-03-03';
 
   $ini=parse_ini_file("1rep4out.ini");
   foreach($ini as $k=>$v)
@@ -171,7 +171,7 @@
         else
           {
            echo2log($ini['logfile'], "ignore");
-           $mm='under construction 1!!!';
+           $mm='under construction 1!!!';//добавить содержимое архива
           }
         file_put_contents($file4already, curtime($fn1), FILE_APPEND | LOCK_EX);
         //отправим письмо о содержимом архива
